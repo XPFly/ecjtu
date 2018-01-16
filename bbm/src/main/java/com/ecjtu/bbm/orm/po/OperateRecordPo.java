@@ -1,6 +1,7 @@
 package com.ecjtu.bbm.orm.po;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @description: 操作记录表Po
@@ -33,24 +34,11 @@ public class OperateRecordPo implements Serializable {
     /**
      * 操作时间
      */
-    private String operateTime;
+    private Date operateTime;
     /**
      * 备注
      */
     private String remark;
-
-    public OperateRecordPo() {
-    }
-
-    public OperateRecordPo(String uuid, String foreignKey, String operator, String operateType, String contentNo, String operateTime, String remark) {
-        this.uuid = uuid;
-        this.foreignKey = foreignKey;
-        this.operator = operator;
-        this.operateType = operateType;
-        this.contentNo = contentNo;
-        this.operateTime = operateTime;
-        this.remark = remark;
-    }
 
     public String getUuid() {
         return uuid;
@@ -92,11 +80,11 @@ public class OperateRecordPo implements Serializable {
         this.contentNo = contentNo;
     }
 
-    public String getOperateTime() {
+    public Date getOperateTime() {
         return operateTime;
     }
 
-    public void setOperateTime(String operateTime) {
+    public void setOperateTime(Date operateTime) {
         this.operateTime = operateTime;
     }
 
